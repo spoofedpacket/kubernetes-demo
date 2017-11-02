@@ -1,0 +1,4 @@
+KUBELET_ADDRESS="--address=0.0.0.0"
+KUBELET_HOSTNAME="--hostname-override=kub-node1"
+KUBELET_API_SERVER="--api-servers=http://kub-node1:8080"
+KUBELET_ARGS=""

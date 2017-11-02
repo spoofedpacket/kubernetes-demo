@@ -1,0 +1,2 @@
+FLANNEL_ETCD_ENDPOINTS="http://kub-node1:2379,http://kub-node2:2379,http://kub-node3:2379"
+FLANNEL_ETCD_KEY="/network"

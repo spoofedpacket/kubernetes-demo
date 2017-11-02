@@ -5,9 +5,9 @@ class hosts (
    $hosts_target = '/etc/hosts',
 ) {
 
-   $hosts_hash = { 'kub_node1' => { 'ip' => '192.168.33.10'},
-                   'kub_node2' => { 'ip' => '192.168.33.11'},
-                   'kub_node3' => { 'ip' => '192.168.33.12'},
+   $hosts_hash = { 'kub-node1' => { 'ip' => '192.168.33.10'},
+                   'kub-node2' => { 'ip' => '192.168.33.11'},
+                   'kub-node3' => { 'ip' => '192.168.33.12'},
                  }
 
    create_resources(host, $hosts_hash, {
