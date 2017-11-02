@@ -1,0 +1,11 @@
+* start pod - explain pod
+* get information about pods
+* start deployment - explain deployments
+* connect to nginx
+* Upgrade nginx
+* connect to nginx again to show upgrade
+* Rollback upgrade
+* connect to nginx again to show rollback
+* Increase number of nginx replicas
+* Start a service
+* connect to service 
