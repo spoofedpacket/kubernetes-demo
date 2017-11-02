@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: nginx 
+  name: mynginxenvconfig
+  namespace: default
+spec:
+  containers:
+  - name: nginxcont 
+    image: nginx:latest
+    imagePullPolicy: Always
+    envFrom:
+    - configMapRef:
+       name: dbconfig-env

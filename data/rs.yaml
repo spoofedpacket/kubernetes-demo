@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: ReplicaSet
+metadata:
+  labels:
+    run: nginx-replicaset
+  name: nginx-replicaset
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      run: nginxlabel
+  template:
+    metadata:
+      labels:
+        run: nginxlabel
+    spec:
+      containers:
+      - name: nginxcont
+        image: nginx:latest
+        imagePullPolicy: Always
