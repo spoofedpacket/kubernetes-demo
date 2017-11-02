@@ -3,7 +3,6 @@
 #
 class hosts ( 
    $hosts_target = '/etc/hosts',
-   $hosts_purge  = false,
 ) {
 
    $hosts_hash = { 'kub_node1' => { 'ip' => '192.168.33.10'},
@@ -15,12 +14,16 @@ class hosts (
      target => $hosts_target,
    })
  
-   if $purge_hosts {
-      # Get rid of anything not provisioned with puppet
-      resources {'host':
-        purge => true,
-      }
+}
+
+class kub {
+   $kub_packages = [ 'etcd', 'flannel',
+                 'kubernetes-master', 'kubernetes-node', 'kubernetes-client' ]
+
+   package { $kub_packages:
+             ensure => 'installed',
    }
 }
 
 include hosts
+include kub
